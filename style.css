@@ -1,46 +1,90 @@
 * {
-  /* box-sizing: border-box; */
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 :focus {
- /* TODO */
+  outline: none;
 }
 
 body {
-  /* TODO */
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #ff7e5f; /* color */
+  background-image: linear-gradient(to right, #ff7e5f, #feb47b); /*gradient colors*/
+  display: flex;
+  justify-content: center; /* Centers the search container horizontally */
+  align-items: center; /* Centers the search container vertically */
+  height: 100vh;
 }
 
-input {
- /* TODO */
+input, .search-container .suggestions {
+  width: 100%;
 }
 
 .search-container {
- /* TODO */
+  width: 300px; /* Sets a fixed width for the search container */
+  position: relative;
 }
-.search-container input,
-.search-container .suggestions {
-  /* TODO */
-}
+
 .search-container input {
- /* TODO */
+  padding: 10px;
+  border: 1px solid grey; /* A light grey border */
+  border-radius: 5px; /* Slightly rounded corners for the input field */
 }
+
 .search-container .suggestions {
-   /* TODO */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  border: 1px solid #cccccc02;
+  border-top: none;
+  z-index: 1000;
 }
 
 ul {
-  /* TODO */
+  background-image: linear-gradient(to right, #ff7e5f, #feb47b); /* Matching gradient for the drop-down */
+  color: #00000;
+  border: 1px solid #00000;
+  border-radius: 5px; /* Rounding the corners */
+  box-shadow: 0 4px 6px rgba(0,0,0,.02); /* Adding a shadow for depth */
+  margin-top: 5px;
+  padding: 0.25px 0;
+  list-style: none;
+  position: absolute;
+  width: calc(100% - 2px); /* Matching the width to the search bar, adjusting for border */
+  max-height: 300px;
+  overflow-y: auto; /* Allowing scroll inside the drop-down if many items */
+  z-index: 100;
 }
+
 ul.has-suggestions {
-  /* TODO */
+  padding: 0;
 }
+
 ul li {
-  /* TODO */
+  padding: 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #d66548;
 }
+
 ul li:hover {
-  /* TODO */
+  background-color: #feb47b; /* Changes the background color on hover */
 }
 
 input {
-   /* TODO */
+  font-size: 16px;
+  width: calc(100% - 20px);
+}
+
+#fruit {
+  background-image: linear-gradient(to right, #ff7e5f, #feb47b); /* Gradient for the search bar */
+  color: #00000;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
